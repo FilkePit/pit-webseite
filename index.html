@@ -9,13 +9,178 @@
   <meta name="keywords" content="Java, Spring Boot, Neo4j, Enterprise Software, Backend, RabbitMQ, Python, PIT, FilkePit">
   <meta name="author" content="FilkePit">
   <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Share Tech Mono', monospace;
+      background-color: #000;
+      color: #0f0;
+      background-image: repeating-linear-gradient(0deg, rgba(0,255,0,0.05) 0px, rgba(0,255,0,0.05) 1px, transparent 1px, transparent 4px),
+                        repeating-linear-gradient(90deg, rgba(0,255,0,0.05) 0px, rgba(0,255,0,0.05) 1px, transparent 1px, transparent 4px);
+      background-size: 100% 100%;
+      animation: scanlines 10s linear infinite;
+    }
+    @keyframes scanlines {
+      0% {background-position: 0 0;}
+      100% {background-position: 0 100px;}
+    }
+    header {
+      background-color: #111;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+    }
+    header h1 {
+      color: #0f0;
+      margin: 1rem 0 0.5rem 0;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: #0f0;
+      text-decoration: none;
+      transition: text-shadow 0.3s ease;
+    }
+    nav a:hover {
+      text-shadow: 0 0 8px #0f0, 0 0 12px #0f0;
+    }
+    .lang-toggle {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      color: #0f0;
+      cursor: pointer;
+      font-weight: bold;
+      transition: text-shadow 0.2s;
+    }
+    .lang-toggle:active {
+      color: #00ff99;
+      text-shadow: 0 0 5px #00ff99;
+    }
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #111;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,255,0,0.2);
+      transition: box-shadow 0.6s ease;
+    }
+    section:hover {
+      box-shadow: 0 0 15px rgba(0,255,0,0.3);
+    }
+    h2 {
+      color: #00ff99;
+      border-bottom: 1px solid #0f0;
+      padding-bottom: 0.3rem;
+    }
+    ul {
+      list-style: square;
+      padding-left: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.7rem;
+    }
+    .tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .tech-item {
+      background-color: #222;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #0f0;
+      transition: all 0.2s ease-in-out;
+    }
+    .tech-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 8px #0f0, 0 0 12px #00ff99;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #0f0;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-  <div class="lang-toggle" onclick="toggleLang()">DE | EN</div>
-  <h1 class="en">PIT</h1>
-  <h1 class="de" style="display:none;">PIT</h1>
-  <p class="en">Enterprise software, Java development, and backend systems.</p>
-  <p class="de" style="display:none;">Enterprise-Software, Java-Entwicklung und Backendsysteme.</p>
+  <header>
+    <div class="lang-toggle" onclick="toggleLang()">DE | EN</div>
+    <h1 class="en">PIT</h1>
+    <h1 class="de" style="display:none;">PIT</h1>
+    <p class="en"><strong>Code. Connect. Create.</strong></p>
+    <p class="de" style="display:none;"><strong>Code. Verbinden. Erschaffen.</strong></p>
+    <p class="en">Where technology is logical – and collaboration human.</p>
+    <p class="de" style="display:none;">Wo Technik logisch – und Zusammenarbeit menschlich ist.</p>
+    <nav>
+      <a href="#about" class="en">About PIT</a>
+      <a href="#about" class="de" style="display:none;">Über PIT</a>
+      <a href="#services" class="en">What I Offer</a>
+      <a href="#services" class="de" style="display:none;">Was ich anbiete</a>
+      <a href="#tech" class="en">Technologies</a>
+      <a href="#tech" class="de" style="display:none;">Technologien</a>
+      <a href="#contact" class="en">Contact</a>
+      <a href="#contact" class="de" style="display:none;">Kontakt</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2 class="en">About PIT</h2>
+    <h2 class="de" style="display:none;">Über PIT</h2>
+    <p class="en">PIT stands for modern, scalable and efficient enterprise software solutions.</p>
+    <p class="de" style="display:none;">PIT steht für moderne, skalierbare und effiziente Enterprise-Softwarelösungen.</p>
+    <p class="en">I specialize in Java development, distributed systems, and agile methodologies.</p>
+    <p class="de" style="display:none;">Ich bin spezialisiert auf Java-Entwicklung, verteilte Systeme und agile Methoden.</p>
+  </section>
+
+  <section id="services">
+    <h2 class="en">What I Offer</h2>
+    <h2 class="de" style="display:none;">Was ich anbiete</h2>
+    <ul class="en">
+      <li>Enterprise software development in Java with focus on scalability, security and performance</li>
+      <li>Architecture of robust backend systems for finance, telecom, and retail sectors</li>
+      <li>Experience in high-security and regulatory-compliant environments</li>
+      <li>Distributed systems with RabbitMQ, Spring Boot, Neo4j, SQL, REST APIs</li>
+      <li>Agile software development with international teams</li>
+      <li>Computer vision (object detection, pose estimation, facial recognition)</li>
+    </ul>
+    <ul class="de" style="display:none;">
+      <li>Enterprise-Softwareentwicklung in Java mit Fokus auf Skalierbarkeit, Sicherheit und Performance</li>
+      <li>Architektur robuster Backend-Systeme für Finanz-, Telekom- und Einzelhandelssektoren</li>
+      <li>Erfahrung mit hochsicheren und regulierten Umgebungen</li>
+      <li>Verteilte Systeme mit RabbitMQ, Spring Boot, Neo4j, SQL, REST APIs</li>
+      <li>Agile Softwareentwicklung mit internationalen Teams</li>
+      <li>Computer Vision (Objekterkennung, Pose Estimation, Gesichtserkennung)</li>
+    </ul>
+  </section>
+
+  <section id="tech">
+    <h2 class="en">Technologies</h2>
+    <h2 class="de" style="display:none;">Technologien</h2>
+    <div class="tech-list">
+      <div class="tech-item">Java</div>
+      <div class="tech-item">Spring Boot</div>
+      <div class="tech-item">Neo4j</div>
+      <div class="tech-item">SQL</div>
+      <div class="tech-item">RabbitMQ</div>
+      <div class="tech-item">RESTful APIs</div>
+      <div class="tech-item">Python</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="en">Contact</h2>
+    <h2 class="de" style="display:none;">Kontakt</h2>
+    <p class="en">Email: <a href="mailto:kontakt@pits-solution.com">kontakt@pits-solution.com</a></p>
+    <p class="de" style="display:none;">E-Mail: <a href="mailto:kontakt@pits-solution.com">kontakt@pits-solution.com</a></p>
+  </section>
+
+  <footer>
+    <p class="en">&copy; 2025 PIT – Professional IT Services</p>
+    <p class="de" style="display:none;">&copy; 2025 PIT – Professionelle IT-Dienstleistungen</p>
+  </footer>
 
   <script>
     function toggleLang() {
