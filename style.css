@@ -1,78 +1,81 @@
 
 body {
+    background-color: #0b0b0b;
+    color: #00ff41;
+    font-family: 'Share Tech Mono', monospace;
     margin: 0;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #000;
-    color: #0f0;
+    padding: 0;
     text-align: center;
 }
-
 header {
     padding: 20px;
 }
-
 .logo-container {
-    animation: pulseGlow 2s infinite;
-    display: inline-block;
-    margin-bottom: 10px;
-}
-
-.logo {
-    width: 180px;
-    height: auto;
+    margin: 0 auto 10px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
-    background-color: #000;
+    box-shadow: 0 0 20px #00ff41;
+    animation: pulse 3s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+h1 {
+    font-size: 2.5em;
+}
+.subtitle {
+    font-size: 1.2em;
+    margin: 0;
+}
 nav a {
-    margin: 0 10px;
-    color: #0f0;
+    margin: 0 15px;
+    color: #00ff41;
     text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
 }
-
-main {
-    margin: 20px;
+nav a:hover {
+    color: white;
 }
-
 section {
-    margin-bottom: 40px;
-    border: 1px solid #0f0;
+    margin: 40px auto;
     padding: 20px;
+    max-width: 800px;
+    border: 1px solid #00ff41;
     border-radius: 10px;
 }
-
 ul {
-    list-style: none;
-    padding: 0;
+    list-style: square inside;
 }
-
-ul li {
-    padding: 5px 0;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
+li:hover {
+    color: #ffffff;
 }
-
-ul li:hover {
-    color: #8f8;
-    text-shadow: 0 0 5px #0f0;
-}
-
-.tech-list span {
-    display: inline-block;
-    background-color: #111;
-    border: 1px solid #0f0;
+.tech-buttons button {
+    background-color: black;
+    color: #00ff41;
+    border: 2px solid #00ff41;
     border-radius: 8px;
-    padding: 10px 20px;
+    padding: 10px 15px;
     margin: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.3s;
 }
-
-.tech-list span:hover {
-    background-color: #0f0;
-    color: #000;
+.tech-buttons button:hover {
+    background-color: #00ff41;
+    color: black;
 }
-
-@keyframes pulseGlow {
-    0% { box-shadow: 0 0 10px #0f0; }
-    50% { box-shadow: 0 0 30px #0f0; }
-    100% { box-shadow: 0 0 10px #0f0; }
+.lang-switch {
+    text-align: right;
+    margin-right: 20px;
+}
+@keyframes pulse {
+    0% { box-shadow: 0 0 10px #00ff41; }
+    50% { box-shadow: 0 0 30px #00ff41; }
+    100% { box-shadow: 0 0 10px #00ff41; }
 }
