@@ -2,50 +2,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PIT - Enterprise Java Development Solutions">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>PIT - Java Development</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PIT – Software Engineering</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <div class="language-switcher"><a href="#">DE</a> | <a href="#">EN</a></div>
-        <img src="logo-borg-style.png" alt="PIT Logo" class="logo" />
-        <p class="tagline">Code. Connect. Create.</p>
-        <nav>
-            <a href="#about">About PIT</a>
-            <a href="#offer">What I Offer</a>
-            <a href="#tech">Technologies</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+  <div class="lang-switch">
+    <button onclick="setLang('en')">EN</button> | <button onclick="setLang('de')">DE</button>
+  </div>
+  <header>
+    <div class="logo-wrapper">
+      <img src="logo-borg-style.png" alt="PIT Logo" class="logo" />
+    </div>
+    <h1 id="slogan">Code. Connect. Create.</h1>
+    <nav>
+      <a href="#about" id="nav-about">About PIT</a>
+      <a href="#offer" id="nav-offer">What I Offer</a>
+      <a href="#tech" id="nav-tech">Technologies</a>
+      <a href="#contact" id="nav-contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
     <section id="about">
-        <h2>About PIT</h2>
-        <p>PIT provides scalable and efficient enterprise software development.<br>
-        Specialized in Java development, distributed systems, and agile methods.</p>
+      <h2 id="about-title">About PIT</h2>
+      <p id="about-text">PIT provides scalable and efficient enterprise software development. Specialized in Java development, distributed systems, and agile methods.</p>
     </section>
+
     <section id="offer">
-        <h2>What I Offer</h2>
-        <ul>
-            <li>Enterprise software development in Java with focus on scalability, security, and performance</li>
-            <li>Architecture of robust backend systems for finance, telecom, and retail</li>
-            <li>Experience in high-security and regulatory-compliant environments</li>
-            <li>Distributed systems with RabbitMQ, Spring Boot, Neo4j, SQL, REST APIs</li>
-            <li>Agile software development with international teams</li>
-            <li>Computer Vision (object detection, pose estimation, facial recognition)</li>
-        </ul>
+      <h2 id="offer-title">What I Offer</h2>
+      <ul id="offer-list">
+        <li>Enterprise software development in Java with focus on scalability, security, and performance</li>
+        <li>Architecture of robust backend systems for finance, telecom, and retail</li>
+        <li>Experience in high-security and regulatory-compliant environments</li>
+        <li>Distributed systems with RabbitMQ, Spring Boot, Neo4j, SQL, REST APIs</li>
+        <li>Agile software development with international teams</li>
+        <li>Computer Vision (object detection, pose estimation, facial recognition)</li>
+      </ul>
     </section>
+
     <section id="tech">
-        <h2>Technologies</h2>
-        <div class="tech-tags">
-            <span>Java</span><span>Spring Boot</span><span>Neo4j</span><span>SQL</span><span>RabbitMQ</span><span>RESTful-APIs</span><span>Python</span>
-        </div>
+      <h2 id="tech-title">Technologies</h2>
+      <div class="tech-tags">
+        <span>Java</span><span>Spring Boot</span><span>Neo4j</span><span>SQL</span><span>RabbitMQ</span><span>RESTful APIs</span><span>Python</span>
+      </div>
     </section>
+
     <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:kontakt@pits-solution.com">kontakt@pits-solution.com</a></p>
+      <h2 id="contact-title">Contact</h2>
+      <p id="contact-text">Email: <a href="mailto:kontakt@pits-solution.com">kontakt@pits-solution.com</a></p>
     </section>
+  </main>
+
+  <script>
+    const translations = {
+      en: {
+        slogan: "Code. Connect. Create.",
+        "nav-about": "About PIT",
+        "nav-offer": "What I Offer",
+        "nav-tech": "Technologies",
+        "nav-contact": "Contact",
+        "about-title": "About PIT",
+        "about-text": "PIT provides scalable and efficient enterprise software development. Specialized in Java development, distributed systems, and agile methods.",
+        "offer-title": "What I Offer",
+        "offer-list": [
+          "Enterprise software development in Java with focus on scalability, security, and performance",
+          "Architecture of robust backend systems for finance, telecom, and retail",
+          "Experience in high-security and regulatory-compliant environments",
+          "Distributed systems with RabbitMQ, Spring Boot, Neo4j, SQL, REST APIs",
+          "Agile software development with international teams",
+          "Computer Vision (object detection, pose estimation, facial recognition)"
+        ],
+        "tech-title": "Technologies",
+        "contact-title": "Contact",
+        "contact-text": "Email: kontakt@pits-solution.com"
+      },
+      de: {
+        slogan: "Code. Connect. Create.",
+        "nav-about": "Über PIT",
+        "nav-offer": "Was ich anbiete",
+        "nav-tech": "Technologien",
+        "nav-contact": "Kontakt",
+        "about-title": "Über PIT",
+        "about-text": "PIT steht für moderne, skalierbare und effiziente Unternehmenssoftwarelösungen. Ich bin spezialisiert auf Java-Entwicklung, verteilte Systeme und agile Methoden.",
+        "offer-title": "Was ich anbiete",
+        "offer-list": [
+          "Enterprise-Softwareentwicklung in Java mit Fokus auf Skalierbarkeit, Sicherheit und Performance",
+          "Architektur robuster Backend-Systeme für Finanz-, Telekommunikations- und Einzelhandelsbranchen",
+          "Erfahrung in Hochsicherheits- und gesetzeskonformen Umgebungen",
+          "Verteilte Systeme mit RabbitMQ, Spring Boot, Neo4j, SQL, REST-APIs",
+          "Agile Softwareentwicklung mit internationalen Teams",
+          "Computer Vision (Objekterkennung, Posenabschätzung, Gesichtserkennung)"
+        ],
+        "tech-title": "Technologien",
+        "contact-title": "Kontakt",
+        "contact-text": "E-Mail: kontakt@pits-solution.com"
+      }
+    };
+
+    function setLang(lang) {
+      const t = translations[lang];
+      for (const id in t) {
+        if (id === "offer-list") {
+          const ul = document.getElementById("offer-list");
+          ul.innerHTML = "";
+          t[id].forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = item;
+            ul.appendChild(li);
+          });
+        } else {
+          const el = document.getElementById(id);
+          if (el) el.textContent = t[id];
+        }
+      }
+    }
+  </script>
 </body>
 </html>

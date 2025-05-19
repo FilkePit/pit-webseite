@@ -1,81 +1,69 @@
 
 body {
-    background-color: #0b0b0b;
-    color: #00ff41;
-    font-family: 'Share Tech Mono', monospace;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  background: #000;
+  color: #00ff00;
+  font-family: monospace;
+  margin: 0;
+  text-align: center;
 }
 header {
-    padding: 20px;
+  padding: 20px;
 }
-.logo-container {
-    margin: 0 auto 10px;
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    box-shadow: 0 0 20px #00ff41;
-    animation: pulse 3s infinite;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.logo-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  border-radius: 50%;
+  background: rgba(0, 255, 0, 0.1);
+  animation: pulse 2s infinite;
+  z-index: 0;
+}
+.logo-wrapper {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
 }
 .logo {
-    max-width: 100%;
-    height: auto;
+  position: relative;
+  z-index: 1;
+  width: 160px;
+  border-radius: 50%;
 }
-h1 {
-    font-size: 2.5em;
-}
-.subtitle {
-    font-size: 1.2em;
-    margin: 0;
+.logo {
+  width: 160px;
+  border-radius: 50%;
 }
 nav a {
-    margin: 0 15px;
-    color: #00ff41;
-    text-decoration: none;
-    font-size: 1.1em;
-    transition: color 0.3s;
+  color: #0f0;
+  margin: 0 10px;
+  text-decoration: none;
 }
 nav a:hover {
-    color: white;
+  text-shadow: 0 0 5px #0f0;
 }
 section {
-    margin: 40px auto;
-    padding: 20px;
-    max-width: 800px;
-    border: 1px solid #00ff41;
-    border-radius: 10px;
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 800px;
+  border: 1px solid #0f0;
+  border-radius: 10px;
 }
-ul {
-    list-style: square inside;
+.tech-tags span {
+  margin: 5px;
+  padding: 6px 12px;
+  border: 1px solid #0f0;
+  border-radius: 5px;
+  display: inline-block;
 }
-li:hover {
-    color: #ffffff;
-}
-.tech-buttons button {
-    background-color: black;
-    color: #00ff41;
-    border: 2px solid #00ff41;
-    border-radius: 8px;
-    padding: 10px 15px;
-    margin: 5px;
-    font-family: inherit;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-.tech-buttons button:hover {
-    background-color: #00ff41;
-    color: black;
-}
-.lang-switch {
-    text-align: right;
-    margin-right: 20px;
+.tech-tags span:hover {
+  background: #0f0;
+  color: #000;
 }
 @keyframes pulse {
-    0% { box-shadow: 0 0 10px #00ff41; }
-    50% { box-shadow: 0 0 30px #00ff41; }
-    100% { box-shadow: 0 0 10px #00ff41; }
+  0% { box-shadow: 0 0 5px #0f0; }
+  50% { box-shadow: 0 0 25px #0f0; }
+  100% { box-shadow: 0 0 5px #0f0; }
 }
