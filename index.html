@@ -2,119 +2,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="PIT – Scalable and secure Java software development for enterprise needs.">
-  <meta name="keywords" content="Java, Spring Boot, Backend, Neo4j, SQL, RabbitMQ, REST API, Software Developer">
-  <meta name="author" content="PIT Solutions">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <title>PIT – Professional IT Services</title>
-  <style>
-    @keyframes pulse {
-      0% { box-shadow: 0 0 10px #0f0; }
-      50% { box-shadow: 0 0 20px #0f0; }
-      100% { box-shadow: 0 0 10px #0f0; }
-    }
-
-    body {
-      margin: 0;
-      font-family: monospace;
-      background-color: #000;
-      color: #0f0;
-      text-align: center;
-    }
-
-    header {
-      padding: 2rem;
-    }
-
-    .logo-wrapper {
-      width: 200px;
-      height: 200px;
-      margin: 0 auto;
-      border-radius: 50%;
-      animation: pulse 2s infinite;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .logo-wrapper img {
-      width: 100%;
-      border-radius: 50%;
-    }
-
-    nav {
-      margin: 1rem 0;
-    }
-
-    nav a {
-      color: #0f0;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .lang-switch {
-      position: absolute;
-      top: 1rem;
-      right: 2rem;
-    }
-
-    .lang-switch a {
-      margin-left: 0.5rem;
-      cursor: pointer;
-    }
-
-    section {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
-      border: 1px solid #0f0;
-      border-radius: 10px;
-    }
-  </style>
-  <script>
-    const content = {
-      en: {
-        aboutTitle: "About PIT",
-        aboutText: "PIT provides scalable and efficient enterprise software development. Specialized in Java development, distributed systems, and agile methods."
-      },
-      de: {
-        aboutTitle: "Über PIT",
-        aboutText: "PIT steht für moderne, skalierbare und effiziente Enterprise-Softwarelösungen. Ich bin spezialisiert auf Java-Entwicklung, verteilte Systeme und agile Methoden."
-      }
-    };
-
-    function switchLang(lang) {
-      document.getElementById("about-title").textContent = content[lang].aboutTitle;
-      document.getElementById("about-text").textContent = content[lang].aboutText;
-    }
-  </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>PIT – Enterprise Software</title>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <div class="lang-switch">
-    <a onclick="switchLang('de')">DE</a> |
-    <a onclick="switchLang('en')">EN</a>
-  </div>
+    <header>
+        <div class="logo-container">
+            <img src="logo-borg-style.png" alt="PIT Logo" class="logo"/>
+        </div>
+        <h1>Code. Connect. Create.</h1>
+        <nav>
+            <a href="#about">About PIT</a>
+            <a href="#offer">What I Offer</a>
+            <a href="#technologies">Technologies</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-  <header>
-    <div class="logo-wrapper">
-      <img src="logo-borg-style.png" alt="PIT Logo"/>
-    </div>
-    <h2>Code. Connect. Create.</h2>
-  </header>
+    <main>
+        <section id="about">
+            <h2>About PIT</h2>
+            <p>PIT provides scalable and efficient enterprise software development.<br>
+            Specialized in Java development, distributed systems, and agile methods.</p>
+        </section>
 
-  <nav>
-    <a href="#">About PIT</a>
-    <a href="#">What I Offer</a>
-    <a href="#">Technologies</a>
-    <a href="#">Contact</a>
-  </nav>
+        <section id="offer">
+            <h2>What I Offer</h2>
+            <ul>
+                <li>Enterprise software development in Java with focus on scalability, security, and performance</li>
+                <li>Architecture of robust backend systems for finance, telecom, and retail</li>
+                <li>Experience in high-security and regulatory-compliant environments</li>
+                <li>Distributed systems using RabbitMQ, Spring Boot, Neo4j, SQL, REST APIs</li>
+                <li>Agile development with international teams</li>
+                <li>Computer vision (object detection, pose estimation, facial recognition)</li>
+            </ul>
+        </section>
 
-  <section>
-    <h3 id="about-title">About PIT</h3>
-    <p id="about-text">PIT provides scalable and efficient enterprise software development. Specialized in Java development, distributed systems, and agile methods.</p>
-  </section>
+        <section id="technologies">
+            <h2>Technologies</h2>
+            <div class="tech-list">
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>Neo4j</span>
+                <span>SQL</span>
+                <span>RabbitMQ</span>
+                <span>RESTful APIs</span>
+                <span>Python</span>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
