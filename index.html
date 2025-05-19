@@ -1,1 +1,29 @@
-<!DOCTYPE html><html><body><p>Animationsversion wird geladen ...</p></body></html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PIT – Enterprise Software Solutions</title>
+  <meta name="description" content="PIT – Enterprise Softwarelösungen, Java-Entwicklung, verteilte Systeme, agile IT-Services – modern und skalierbar.">
+  <meta name="keywords" content="Java, Spring Boot, Neo4j, Enterprise Software, Backend, RabbitMQ, Python, PIT, FilkePit">
+  <meta name="author" content="FilkePit">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+  <div class="lang-toggle" onclick="toggleLang()">DE | EN</div>
+  <h1 class="en">PIT</h1>
+  <h1 class="de" style="display:none;">PIT</h1>
+  <p class="en">Enterprise software, Java development, and backend systems.</p>
+  <p class="de" style="display:none;">Enterprise-Software, Java-Entwicklung und Backendsysteme.</p>
+
+  <script>
+    function toggleLang() {
+      const en = document.querySelectorAll('.en');
+      const de = document.querySelectorAll('.de');
+      en.forEach(e => e.style.display = e.style.display === 'none' ? '' : 'none');
+      de.forEach(e => e.style.display = e.style.display === 'none' ? '' : 'none');
+    }
+  </script>
+</body>
+</html>
