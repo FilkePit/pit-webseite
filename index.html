@@ -1,167 +1,93 @@
 
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PIT – Enterprise Software</title>
-  <meta name="description" content="PIT bietet Enterprise-Softwareentwicklung mit Fokus auf Java, Skalierbarkeit, Sicherheit und Performance.">
-  <meta name="keywords" content="Java, Softwareentwicklung, Spring Boot, Neo4j, RabbitMQ, REST, PIT">
-  <meta name="author" content="FilkePit">
-  <link rel="icon" href="favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <title>PIT – Enterprise Software Solutions</title>
+  <meta name="description" content="Enterprise Java development, distributed systems, secure backend architecture."/>
+  <link rel="icon" type="image/png" href="favicon.png"/>
   <style>
+    @keyframes glow {
+      0% { box-shadow: 0 0 20px #00ff00; }
+      50% { box-shadow: 0 0 40px #00ff00; }
+      100% { box-shadow: 0 0 20px #00ff00; }
+    }
+
     body {
       margin: 0;
-      font-family: 'Share Tech Mono', monospace;
-      background-color: #000;
-      color: #0f0;
-      background-image: repeating-linear-gradient(0deg, rgba(0,255,0,0.05) 0px, rgba(0,255,0,0.05) 1px, transparent 1px, transparent 4px),
-                        repeating-linear-gradient(90deg, rgba(0,255,0,0.05) 0px, rgba(0,255,0,0.05) 1px, transparent 1px, transparent 4px);
-      background-size: 100% 100%;
-      animation: scanlines 10s linear infinite;
-    }
-    @keyframes scanlines {
-      0% { background-position: 0 0; }
-      100% { background-position: 0 100px; }
-    }
-
-    header {
-      background-color: #111;
+      font-family: 'Courier New', monospace;
+      background-color: #0b0b0b;
+      color: #00ff00;
       text-align: center;
-      padding: 2rem;
-    }
-    .logo-wrapper {
-      display: inline-block;
-      padding: 20px;
-      border-radius: 50%;
-      animation: glow 2s infinite;
-    }
-    .logo-wrapper img {
-      height: 120px;
-    }
-    @keyframes glow {
-      0% { box-shadow: 0 0 0 #0f0; }
-      50% { box-shadow: 0 0 25px #0f0; }
-      100% { box-shadow: 0 0 0 #0f0; }
     }
 
-    header h1 {
-      margin: 0.2rem 0;
-      color: #0f0;
+    .logo-container {
+      margin-top: 20px;
+      animation: glow 2s infinite;
+      display: inline-block;
+    }
+
+    .logo-container img {
+      width: 220px;
+      height: auto;
+      border-radius: 50%;
+    }
+
+    h1 {
+      margin: 0.5rem 0 0;
+      font-size: 2.5rem;
+    }
+
+    nav {
+      margin-top: 1rem;
+      font-size: 1.2rem;
     }
 
     nav a {
+      color: #00ff00;
       margin: 0 1rem;
-      color: #0f0;
       text-decoration: none;
     }
-    nav a:hover {
-      text-shadow: 0 0 8px #0f0, 0 0 12px #0f0;
+
+    nav.language {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 1rem;
     }
 
-    section {
-      max-width: 900px;
+    .content {
+      max-width: 800px;
       margin: 2rem auto;
       padding: 1rem;
       background-color: #111;
+      border: 1px solid #00ff00;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,255,0,0.2);
-    }
-    h2 {
-      color: #00ff99;
-      border-bottom: 1px solid #0f0;
-      padding-bottom: 0.3rem;
-    }
-    ul {
-      list-style: square;
-      padding-left: 1.5rem;
-    }
-    li {
-      margin: 0.6rem 0;
-      transition: text-shadow 0.3s;
-    }
-    li:hover {
-      text-shadow: 0 0 8px #0f0, 0 0 12px #0f0;
-    }
-    .tech-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .tech-item {
-      background-color: #222;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      box-shadow: 0 0 5px #0f0;
-      transition: all 0.2s ease-in-out;
-    }
-    .tech-item:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 8px #0f0, 0 0 12px #00ff99;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo-wrapper">
-      <img src="logo-borg-style.png" alt="PIT Logo">
-    </div>
-    <h1>PIT</h1>
-    <p><strong>Code. Connect. Create.</strong></p>
-    <p>Where technology is logical – and collaboration human.</p>
-    <nav>
-      <a href="#about">About PIT</a>
-      <a href="#services">What I Offer</a>
-      <a href="#tech">Technologies</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <nav class="language">
+    <a href="#">DE</a> | <a href="#">EN</a>
+  </nav>
 
-  <section id="about">
+  <div class="logo-container">
+    <img src="logo.png" alt="PIT Logo">
+  </div>
+  <h1>PIT</h1>
+  <p><strong>Code. Connect. Create.</strong></p>
+  <nav>
+    <a href="#about">About PIT</a>
+    <a href="#offer">What I Offer</a>
+    <a href="#tech">Technologies</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="content" id="about">
     <h2>About PIT</h2>
     <p>PIT provides scalable and efficient enterprise software development.</p>
     <p>Specialized in Java development, distributed systems, and agile methods.</p>
-  </section>
-
-  <section id="services">
-    <h2>What I Offer</h2>
-    <ul>
-      <li>Enterprise software development in Java with focus on scalability, security, and performance</li>
-      <li>Architecture of robust backend systems for finance, telecom, and retail</li>
-      <li>Experience in high-security and compliant environments</li>
-      <li>Distributed systems using RabbitMQ, Spring Boot, Neo4j, SQL, REST APIs</li>
-      <li>Agile development with international teams</li>
-      <li>Computer vision (object detection, pose estimation, face recognition)</li>
-    </ul>
-  </section>
-
-  <section id="tech">
-    <h2>Technologies</h2>
-    <div class="tech-list">
-      <div class="tech-item">Java</div>
-      <div class="tech-item">Spring Boot</div>
-      <div class="tech-item">Neo4j</div>
-      <div class="tech-item">SQL</div>
-      <div class="tech-item">RabbitMQ</div>
-      <div class="tech-item">RESTful APIs</div>
-      <div class="tech-item">Python</div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:kontakt@pits-solution.com">kontakt@pits-solution.com</a></p>
-  </section>
-
-  <footer>
-    &copy; 2025 PIT – Professional IT Services
-  </footer>
+  </div>
 </body>
 </html>
