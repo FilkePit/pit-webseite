@@ -3,91 +3,111 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PIT – Enterprise Software Solutions</title>
-  <meta name="description" content="Enterprise Java development, distributed systems, secure backend architecture."/>
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <meta name="description" content="PIT offers scalable enterprise software, Java development, and backend systems." />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
-    @keyframes glow {
-      0% { box-shadow: 0 0 20px #00ff00; }
-      50% { box-shadow: 0 0 40px #00ff00; }
-      100% { box-shadow: 0 0 20px #00ff00; }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 5px #00ff00; }
+      50% { box-shadow: 0 0 25px #00ff00; }
+      100% { box-shadow: 0 0 5px #00ff00; }
     }
-
     body {
       margin: 0;
-      font-family: 'Courier New', monospace;
-      background-color: #0b0b0b;
-      color: #00ff00;
+      background-color: #111;
+      font-family: 'Courier New', Courier, monospace;
+      color: #0f0;
       text-align: center;
     }
-
-    .logo-container {
-      margin-top: 20px;
-      animation: glow 2s infinite;
-      display: inline-block;
-    }
-
-    .logo-container img {
-      width: 220px;
-      height: auto;
+    header img {
+      width: 200px;
       border-radius: 50%;
+      animation: pulse 2s infinite;
+      background-color: #111;
+      padding: 1rem;
     }
-
-    h1 {
-      margin: 0.5rem 0 0;
-      font-size: 2.5rem;
-    }
-
-    nav {
-      margin-top: 1rem;
-      font-size: 1.2rem;
-    }
-
     nav a {
-      color: #00ff00;
       margin: 0 1rem;
+      color: #0f0;
       text-decoration: none;
     }
-
-    nav.language {
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .lang-switch {
       position: absolute;
       top: 10px;
       right: 20px;
-      font-size: 1rem;
+      color: #0f0;
     }
-
-    .content {
-      max-width: 800px;
+    section {
+      max-width: 900px;
       margin: 2rem auto;
       padding: 1rem;
-      background-color: #111;
-      border: 1px solid #00ff00;
+      border: 1px solid #0f0;
       border-radius: 10px;
     }
+    .hidden {
+      display: none;
+    }
   </style>
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.lang-' + lang).forEach(el => el.classList.remove('hidden'));
+    }
+  </script>
 </head>
-<body>
-  <nav class="language">
-    <a href="#">DE</a> | <a href="#">EN</a>
-  </nav>
-
-  <div class="logo-container">
-    <img src="logo.png" alt="PIT Logo">
+<body onload="switchLang('en')">
+  <div class="lang-switch">
+    <a href="#" onclick="switchLang('de')">DE</a> |
+    <a href="#" onclick="switchLang('en')">EN</a>
   </div>
-  <h1>PIT</h1>
-  <p><strong>Code. Connect. Create.</strong></p>
+  <header>
+    <img src="logo-borg-style.png" alt="PIT Logo" />
+    <h1>PIT</h1>
+    <p><strong>Code. Connect. Create.</strong></p>
+  </header>
   <nav>
     <a href="#about">About PIT</a>
     <a href="#offer">What I Offer</a>
     <a href="#tech">Technologies</a>
     <a href="#contact">Contact</a>
   </nav>
-
-  <div class="content" id="about">
-    <h2>About PIT</h2>
-    <p>PIT provides scalable and efficient enterprise software development.</p>
-    <p>Specialized in Java development, distributed systems, and agile methods.</p>
-  </div>
+  <section id="about">
+    <h2 class="lang lang-en">About PIT</h2>
+    <h2 class="lang lang-de hidden">Über PIT</h2>
+    <p class="lang lang-en">PIT provides scalable and efficient enterprise software development.<br>Specialized in Java development, distributed systems, and agile methods.</p>
+    <p class="lang lang-de hidden">PIT steht für moderne, skalierbare und effiziente Unternehmenssoftwarelösungen.<br>Ich bin spezialisiert auf Java-Entwicklung, verteilte Systeme und agile Methoden.</p>
+  </section>
+  <section id="offer">
+    <h2 class="lang lang-en">What I Offer</h2>
+    <h2 class="lang lang-de hidden">Was ich anbiete</h2>
+    <ul class="lang lang-en">
+      <li>Enterprise software development in Java with focus on scalability, security, and performance</li>
+      <li>Architecture of robust backend systems for finance, telecom, and retail</li>
+      <li>Experience in high-security and regulatory-compliant environments</li>
+      <li>Distributed systems with RabbitMQ, Spring Boot, Neo4j, SQL, REST APIs</li>
+      <li>Agile software development with international teams</li>
+      <li>Computer Vision (object detection, pose estimation, facial recognition)</li>
+    </ul>
+    <ul class="lang lang-de hidden">
+      <li>Enterprise-Softwareentwicklung in Java mit Fokus auf Skalierbarkeit, Sicherheit und Performance</li>
+      <li>Architektur robuster Backend-Systeme für Finanz-, Telekommunikations- und Einzelhandelsbranchen</li>
+      <li>Erfahrung in Hochsicherheits- und gesetzeskonformen Umgebungen</li>
+      <li>Verteilte Systeme mit RabbitMQ, Spring Boot, Neo4j, SQL, REST-APIs</li>
+      <li>Agile Softwareentwicklung mit internationalen Teams</li>
+      <li>Computer Vision (Objekterkennung, Posenabschätzung, Gesichtserkennung)</li>
+    </ul>
+  </section>
+  <section id="tech">
+    <h2>Technologies</h2>
+    <p>Java, Spring Boot, Neo4j, SQL, RabbitMQ, RESTful APIs, Python</p>
+  </section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:kontakt@pits-solution.com">kontakt@pits-solution.com</a></p>
+  </section>
 </body>
 </html>
