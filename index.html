@@ -25,25 +25,32 @@
       0% { background-position: 0 0; }
       100% { background-position: 0 100px; }
     }
+
     header {
       background-color: #111;
       text-align: center;
       padding: 2rem;
     }
-    header img {
-      height: 80px;
-      margin-bottom: 1rem;
-      animation: pulse 2s infinite;
+    .logo-wrapper {
+      display: inline-block;
+      padding: 20px;
+      border-radius: 50%;
+      animation: glow 2s infinite;
     }
-    @keyframes pulse {
-      0% { transform: scale(1); filter: drop-shadow(0 0 0 #0f0); }
-      50% { transform: scale(1.05); filter: drop-shadow(0 0 10px #0f0); }
-      100% { transform: scale(1); filter: drop-shadow(0 0 0 #0f0); }
+    .logo-wrapper img {
+      height: 120px;
     }
+    @keyframes glow {
+      0% { box-shadow: 0 0 0 #0f0; }
+      50% { box-shadow: 0 0 25px #0f0; }
+      100% { box-shadow: 0 0 0 #0f0; }
+    }
+
     header h1 {
       margin: 0.2rem 0;
       color: #0f0;
     }
+
     nav a {
       margin: 0 1rem;
       color: #0f0;
@@ -52,6 +59,7 @@
     nav a:hover {
       text-shadow: 0 0 8px #0f0, 0 0 12px #0f0;
     }
+
     section {
       max-width: 900px;
       margin: 2rem auto;
@@ -92,6 +100,7 @@
       transform: scale(1.05);
       box-shadow: 0 0 8px #0f0, 0 0 12px #00ff99;
     }
+
     footer {
       text-align: center;
       padding: 2rem;
@@ -101,7 +110,9 @@
 </head>
 <body>
   <header>
-    <img src="logo-borg-style.png" alt="PIT Logo">
+    <div class="logo-wrapper">
+      <img src="logo-borg-style.png" alt="PIT Logo">
+    </div>
     <h1>PIT</h1>
     <p><strong>Code. Connect. Create.</strong></p>
     <p>Where technology is logical – and collaboration human.</p>
